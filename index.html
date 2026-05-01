@@ -22,7 +22,7 @@
             background-color: var(--dark-bg);
             color: var(--text-light);
             font-family: 'Cormorant Garamond', serif;
-            /* A heavy, dark vignette over a shadowy city backdrop */
+            /* Updated background image with heavy noir vignette */
             background-image: 
                 radial-gradient(circle at center, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.95) 80%, rgba(0,0,0,1) 100%), 
                 url('https://i.ibb.co/VYmxPKNf/image.jpg?q=80&w=2070&auto=format&fit=crop'); 
@@ -201,21 +201,76 @@
             padding: 0 10px;
         }
 
-        /* Lore Section */
+        /* Lore Section Integration */
         .about {
-            padding: 20px 40px;
+            padding: 20px 20px;
+            text-align: center;
         }
 
         .about h3 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             letter-spacing: 4px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .about p {
             line-height: 1.9;
+            font-size: 1.25rem;
+            color: #ccc;
+            max-width: 750px;
+            margin: 0 auto 20px auto;
+        }
+
+        .lore-grid {
+            display: flex;
+            gap: 20px;
+            margin: 40px auto;
+            text-align: left;
+            max-width: 800px;
+        }
+
+        @media (max-width: 768px) {
+            .lore-grid {
+                flex-direction: column;
+            }
+        }
+
+        .lore-box {
+            flex: 1;
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid var(--gold-dim);
+            padding: 25px;
+            box-shadow: inset 0 0 30px rgba(0,0,0,0.9);
+        }
+
+        .lore-box h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            margin-top: 0;
+            letter-spacing: 2px;
             font-size: 1.3rem;
+            border-bottom: 1px solid var(--gold-dim);
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .lore-box p {
+            font-size: 1.1rem;
             color: #aaa;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .highlight-quote {
+            font-family: 'Cinzel', serif;
+            color: var(--gold) !important;
+            font-size: 1.6rem !important;
+            letter-spacing: 2px;
+            margin: 50px auto !important;
+            text-shadow: 0 0 15px rgba(197, 160, 89, 0.3);
+            max-width: 700px;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -256,10 +311,27 @@
 
                 <div class="divider"></div>
 
-                <!-- Lore / Info Section -->
+                <!-- S10 Prequel Lore Section -->
                 <div class="about">
-                    <h3>A New Era Dawns</h3>
-                    <p>Welcome to 1930s Jondique. The syndicates are restless, and the hum of unregulated industry masks the dark secrets of a booming underworld. Form your pack, claim your territory, and build an empire of ash and gold. Prepare yourself for a fully modded, uncompromising survival roleplay experience.</p>
+                    <h3>The S10 Genesis</h3>
+                    <p>The digital fortresses and high-tech warfare of <strong>Season 10</strong> were not built on a void; they were built on the bones of the 1930s. Long before the era of automated dominance, the foundations of the Jondique legacy were laid in the rain and the grit of the Great Depression.</p>
+                    
+                    <p>In the established lore of Season 10, the "Wolves" are an apex power. <strong>Jondique Noir</strong> is the story of how that power was first seized. It is the raw, analogue "Version 1.0" of the syndicate, where the need-to-know philosophy was a survival tactic rather than a corporate policy.</p>
+                    
+                    <div class="lore-grid">
+                        <div class="lore-box">
+                            <h4>From Tommy Guns to Tech</h4>
+                            <p>While S10 is defined by its sophisticated systems, S1 is defined by raw machinery. The industrial automation you see in the 30s is the direct ancestor to the automated server scripts and complexes of the future.</p>
+                        </div>
+                        <div class="lore-box">
+                            <h4>The Original Coordinates</h4>
+                            <p>Discover the original power seats that become legendary landmarks in the S10 map. The Noir era marks the exact point in history where the timeline diverges and the legendary blood-feuds begin.</p>
+                        </div>
+                    </div>
+
+                    <p class="highlight-quote">"You cannot understand the apex without witnessing the rise."</p>
+                    
+                    <p>If Season 10 is the finished masterpiece, Jondique Noir is the blueprint drawn in charcoal and blood. Everything fought for in the modern era starts right here, in the shadows of 1936.</p>
                 </div>
 
             </div>
