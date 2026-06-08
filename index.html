@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Jondique Noir — A Minecraft Server, Season 1: Genesis</title>
-<meta name="description" content="Jondique Noir — a 1930s noir Minecraft server. Season X: Genesis ignites 21 June 2026." />
+<title>Jondique Noir — A Minecraft Server, Season I: An Origin Story</title>
+<meta name="description" content="Jondique Noir — a 1930s noir Minecraft server. Season I: An Origin Story ignites 21 June 2026, 6:45pm AEST." />
 <meta name="theme-color" content="#030303" />
 
 <!-- Fonts -->
@@ -245,8 +245,8 @@ section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
 
 /* ---------- Trailers ---------- */
 .trailers-grid{
-  display:grid;gap:1.5rem;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  display:grid;gap:2rem;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,540px),1fr));
 }
 .trailer{
   padding:.6rem;
@@ -279,6 +279,34 @@ section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
 .mod .kicker{font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.35em;color:var(--ash);text-transform:uppercase;margin-bottom:-.3rem}
 .mod p{margin:0;color:var(--bone)}
 
+/* ---------- Classes (banners) ---------- */
+.classes-grid{display:grid;gap:1.8rem;grid-template-columns:1fr}
+@media (min-width:780px){.classes-grid{grid-template-columns:1fr 1fr}}
+.class-banner{
+  position:relative;overflow:hidden;
+  aspect-ratio: 2 / 1;
+  border:1px solid var(--line-strong);outline:1px solid var(--line);outline-offset:6px;
+  display:flex;align-items:flex-end;
+  transition:transform .5s ease, box-shadow .5s ease;
+}
+.class-banner:hover{transform:translateY(-4px);box-shadow:var(--shadow),0 0 50px rgba(197,160,89,.2)}
+.class-banner img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:grayscale(.25) contrast(1.05) sepia(.15) brightness(.85);
+  transition:transform .8s ease, filter .8s ease;
+}
+.class-banner:hover img{transform:scale(1.04);filter:grayscale(.1) contrast(1.1) sepia(.1) brightness(.95)}
+.class-banner::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(3,3,3,.1) 0%, rgba(3,3,3,.55) 55%, rgba(3,3,3,.92) 100%);
+}
+.class-caption{
+  position:relative;z-index:2;padding:1.6rem 1.8rem;width:100%;
+}
+.class-caption .kicker{font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.4em;color:var(--brass-dim);text-transform:uppercase;display:block;margin-bottom:.4rem}
+.class-caption h3{margin:0 0 .5rem;color:var(--brass);font-size:1.35rem;letter-spacing:.22em}
+.class-caption p{margin:0;color:var(--bone);font-size:1rem;line-height:1.55;max-width:46ch}
+
 /* ---------- Footer ---------- */
 footer{
   border-top:1px solid var(--line);
@@ -304,8 +332,9 @@ footer small{font-family:'Cinzel',serif;letter-spacing:.3em;font-size:.65rem;tex
     <div class="wrap nav-inner">
       <a href="#top" class="brand"><span class="brand-mark"></span><span>Jondique Noir</span></a>
       <ul>
-        <li><a href="#countdown">Genesis</a></li>
+        <li><a href="#countdown">Opening</a></li>
         <li><a href="#lore">Lore</a></li>
+        <li><a href="#classes">Classes</a></li>
         <li><a href="#trailers">Reels</a></li>
         <li><a href="#mods">Apparatus</a></li>
       </ul>
@@ -317,7 +346,7 @@ footer small{font-family:'Cinzel',serif;letter-spacing:.3em;font-size:.65rem;tex
     <div class="hero-bg"></div>
     <div class="lamp" aria-hidden="true"></div>
     <div class="wrap">
-      <span class="eyebrow">Season 1 &nbsp;·&nbsp; A Origin Story</span>
+      <span class="eyebrow">Season I &nbsp;·&nbsp; An Origin Story</span>
       <h1>Jondique<br><span class="amp">— noir —</span></h1>
       <div class="rule"><span>MCMXXXVI · Est. in shadow</span></div>
       <p class="tag">A wager struck under gaslight. A city of iron, brass and bad intentions. The engines turn at midnight — and the world begins again.</p>
@@ -331,17 +360,71 @@ footer small{font-family:'Cinzel',serif;letter-spacing:.3em;font-size:.65rem;tex
   <!-- ============ COUNTDOWN ============ -->
   <section id="countdown" class="countdown">
     <div class="wrap" style="text-align:center">
-      <span class="eyebrow reveal">The Genesis Hour</span>
-      <h2 class="reveal">Doors Open · 21 June 2026</h2>
+      <span class="eyebrow reveal">The Opening Hour</span>
+      <h2 class="reveal">Doors Open · 21 June 2026 · 6:45 PM AEST</h2>
       <div class="rule reveal"><span>Time, gentlemen</span></div>
 
-      <div class="clock deco-border glass reveal" role="timer" aria-live="polite" aria-label="Countdown to Season X launch">
+      <div class="clock deco-border glass reveal" role="timer" aria-live="polite" aria-label="Countdown to Season I launch">
         <div class="cell"><span class="num" data-unit="days">00</span><span class="lbl">Days</span></div>
         <div class="cell"><span class="num" data-unit="hours">00</span><span class="lbl">Hours</span></div>
         <div class="cell"><span class="num" data-unit="minutes">00</span><span class="lbl">Minutes</span></div>
         <div class="cell"><span class="num" data-unit="seconds">00</span><span class="lbl">Seconds</span></div>
       </div>
-      <p class="date-line reveal">Sunday, the twenty-first of June, two thousand and twenty-six — at the stroke of midnight, AEST.</p>
+      <p class="date-line reveal">Sunday, the twenty-first of June, two thousand and twenty-six — quarter to seven in the evening, AEST.</p>
+    </div>
+  </section>
+
+  <!-- ============ CLASSES ============
+       Custom mod class system. Swap each <img src="..."> below
+       with your own banner artwork (recommended ~1280×640).         -->
+  <section id="classes">
+    <div class="wrap">
+      <div style="text-align:center">
+        <span class="eyebrow reveal">A Custom Mod Class System</span>
+        <h2 class="reveal">Choose Your Trade</h2>
+        <div class="rule reveal"><span>Four Banners · Four Lives</span></div>
+        <p class="reveal" style="max-width:58ch;margin:0 auto 2.5rem;color:var(--ash);font-style:italic">Every soul in Jondique answers to a calling. Pick one — the city will hold you to it.</p>
+      </div>
+
+      <div class="classes-grid">
+
+        <article class="class-banner reveal">
+          <img src="class-muscle.jpg" alt="The Muscle — a hulking enforcer beneath gaslit alley lamps" loading="lazy" width="1280" height="640">
+          <div class="class-caption">
+            <span class="kicker">Class I</span>
+            <h3>The Muscle</h3>
+            <p>The first answer to every difficult question. Heavy fists, heavier silences — the kind of presence a doorway suddenly notices.</p>
+          </div>
+        </article>
+
+        <article class="class-banner reveal">
+          <img src="class-scoundrels.jpg" alt="The Scoundrels — two cunning thieves picking a lock in the rain" loading="lazy" width="1280" height="640">
+          <div class="class-caption">
+            <span class="kicker">Class II</span>
+            <h3>The Scoundrels</h3>
+            <p>Pockets emptied, locks persuaded, alibis arranged. They keep no ledgers — only debts owed in the dark.</p>
+          </div>
+        </article>
+
+        <article class="class-banner reveal">
+          <img src="class-highroller.jpg" alt="The High Roller — an elegant gambler at a roulette wheel" loading="lazy" width="1280" height="640">
+          <div class="class-caption">
+            <span class="kicker">Class III</span>
+            <h3>The High Roller</h3>
+            <p>Capital is a craft. They turn favours into fortunes and fortunes into leverage — and rarely lose either, openly.</p>
+          </div>
+        </article>
+
+        <article class="class-banner reveal">
+          <img src="class-fixers.jpg" alt="The Fixers — a shadowy broker exchanging an envelope in a back room" loading="lazy" width="1280" height="640">
+          <div class="class-caption">
+            <span class="kicker">Class IV</span>
+            <h3>The Fixers</h3>
+            <p>Brokers of the impossible. A word in the right ear, an envelope in the right hand — and the morning paper prints what they wish.</p>
+          </div>
+        </article>
+
+      </div>
     </div>
   </section>
 
@@ -350,15 +433,15 @@ footer small{font-family:'Cinzel',serif;letter-spacing:.3em;font-size:.65rem;tex
     <div class="wrap lore-grid">
       <div class="lore reveal">
         <span class="eyebrow">Chapter One</span>
-        <h2>Season X · Genesis</h2>
-        <p class="drop">They said the old world had run its course — that the furnaces had cooled and the contracts had gone unsigned. Then a name returned to the ledgers, written in a hand nobody recognised: <em>Jondique</em>. And with it, an offer no honest soul could refuse.</p>
-        <p>Tenth season opens on a city remade from the cinders of the last. Cobblestone gives way to cast-iron; villages keep their secrets behind frosted glass. Coal-smoke drifts across the harbour and the trains run on time — too well, some would say.</p>
+        <h2>Season I · An Origin Story</h2>
+        <p class="drop">They said the old world had run its course — that the furnaces had cooled and the contracts had gone unsigned. Then a name appeared on the ledgers, written in a hand nobody recognised: <em>Jondique</em>. And with it, an offer no honest soul could refuse.</p>
+        <p>The first season opens on a city being built from the ground up — cobblestone giving way to cast-iron, villages keeping their secrets behind frosted glass. Coal-smoke drifts across the harbour and the trains have only just begun to run on time.</p>
         <p>You are not the hero of this story. You are the one who arrived with a suitcase, a pickaxe, and a quiet talent for being in the right alley at the wrong hour. <em>Build accordingly.</em></p>
       </div>
 
       <aside class="lore-card glass deco-border reveal">
         <div class="dossier">— Confidential Dossier —</div>
-        <h3>Season X · Genesis</h3>
+        <h3>Season I · An Origin Story</h3>
         <p style="color:var(--ash);font-style:italic;margin-bottom:1.2rem">Filed by the Bureau of Standards &amp; Steel, copy redacted for civilian eyes.</p>
         <div class="lore-meta">
           <div><span>Era</span><strong>1936</strong></div>
@@ -388,8 +471,8 @@ footer small{font-family:'Cinzel',serif;letter-spacing:.3em;font-size:.65rem;tex
         <figure class="trailer glass deco-border reveal">
           <div class="frame">
             <iframe loading="lazy" data-video-id="dQw4w9WgXcQ"
-              title="Jondique Noir — Reel I: The Start"
-              src="https://www.youtube.com/embed/A3JVwJ413Js"
+              title="Jondique Noir — Reel I: The Wager"
+              src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
               allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
           </div>
           <figcaption><h3>Reel I — The Wager</h3><span>02 : 14</span></figcaption>
@@ -398,7 +481,7 @@ footer small{font-family:'Cinzel',serif;letter-spacing:.3em;font-size:.65rem;tex
         <figure class="trailer glass deco-border reveal">
           <div class="frame">
             <iframe loading="lazy" data-video-id="dQw4w9WgXcQ"
-              title="Jondique Noir — Reel II: The Future"
+              title="Jondique Noir — Reel II: The Furnace"
               src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
               allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
           </div>
@@ -408,7 +491,7 @@ footer small{font-family:'Cinzel',serif;letter-spacing:.3em;font-size:.65rem;tex
         <figure class="trailer glass deco-border reveal">
           <div class="frame">
             <iframe loading="lazy" data-video-id="dQw4w9WgXcQ"
-              title="Jondique Noir — Reel III: The Now"
+              title="Jondique Noir — Reel III: The Door"
               src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
               allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
           </div>
@@ -450,7 +533,7 @@ footer small{font-family:'Cinzel',serif;letter-spacing:.3em;font-size:.65rem;tex
           </div>
           <span class="kicker">Module Two</span>
           <h3>Voxy</h3>
-          <p>See as far as the eye can see.</p>
+          <p>A Level-of-Detail engine that pushes render distance to the horizon and beyond — near-infinite vistas of smokestacks, cathedrals and coastline, all without choking the frame rate.</p>
         </article>
 
         <article class="mod glass deco-border reveal">
@@ -462,7 +545,7 @@ footer small{font-family:'Cinzel',serif;letter-spacing:.3em;font-size:.65rem;tex
           </div>
           <span class="kicker">Module Three</span>
           <h3>Stellarity</h3>
-          <p>A dimension rewritten.</p>
+          <p>A complete overhaul of the End dimension — alien skies, ruined citadels and rewritten bestiary. The far country gets the cinematic treatment it always deserved.</p>
         </article>
 
       </div>
@@ -473,7 +556,7 @@ footer small{font-family:'Cinzel',serif;letter-spacing:.3em;font-size:.65rem;tex
   <footer>
     <div class="wrap">
       <div class="brand"><span class="brand-mark"></span><span>Jondique Noir</span></div>
-      <p style="margin:0">Created by Rybeez and Berhox.</p>
+      <p style="margin:0">Not affiliated with Mojang or Microsoft. A community theatre, performed nightly.</p>
       <small>© MCMXXXVI – MMXXVI · All wagers final</small>
     </div>
   </footer>
@@ -482,11 +565,11 @@ footer small{font-family:'Cinzel',serif;letter-spacing:.3em;font-size:.65rem;tex
 
 <script>
 /* =========================================================
-   Countdown — to midnight AEST, 21 June 2026.
-   AEST is UTC+10. Midnight AEST = 2026-06-20T14:00:00Z.
+   Countdown — to 6:45 PM AEST, 21 June 2026.
+   AEST is UTC+10. 18:45 AEST on 21 June = 2026-06-21T08:45:00Z.
    ========================================================= */
 (function(){
-  const TARGET = new Date('2026-06-20T14:00:00Z').getTime();
+  const TARGET = new Date('2026-06-21T08:45:00Z').getTime();
   const els = {
     days:   document.querySelector('[data-unit="days"]'),
     hours:  document.querySelector('[data-unit="hours"]'),
